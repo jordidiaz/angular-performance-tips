@@ -11,12 +11,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { ListGenerator } from './list-generator';
 import { RandomListComponent } from './random-list/random-list.component';
+import { NameInputComponent } from './random-list/name-input/name-input.component';
+import { ListComponent } from './random-list/list/list.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    RandomListComponent
-  ],
+  declarations: [AppComponent, RandomListComponent, NameInputComponent, ListComponent],
   imports: [
     CommonModule,
     BrowserModule,
@@ -27,11 +26,7 @@ import { RandomListComponent } from './random-list/random-list.component';
     MatListModule,
     MatChipsModule
   ],
-  providers: [
-    ListGenerator
-  ],
-  bootstrap: [
-    AppComponent
-  ]
+  providers: [ListGenerator],
+  bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
