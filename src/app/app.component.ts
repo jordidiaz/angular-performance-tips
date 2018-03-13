@@ -21,6 +21,7 @@ export class AppComponent implements OnInit {
       label: label,
       num: this.generator.generateNumber(NumRange)
     });
+    this.list1Items = this.list1Items.slice();
   }
 
   public onAddItemToList2(label: string): void {
@@ -28,6 +29,7 @@ export class AppComponent implements OnInit {
       label: label,
       num: this.generator.generateNumber(NumRange)
     });
+    this.list2Items = this.list2Items.slice();
   }
 
   public onRemoveItemFromList1(item: ListItem): void {
