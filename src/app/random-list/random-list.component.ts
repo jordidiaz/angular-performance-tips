@@ -1,5 +1,7 @@
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
+import { List } from 'immutable';
+
 import { ListItem } from '../list-generator';
-import { Component, EventEmitter, Input, Output, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-random-list',
@@ -8,7 +10,7 @@ import { Component, EventEmitter, Input, Output, ChangeDetectionStrategy } from 
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class RandomListComponent {
-  @Input() public listItems: ListItem[];
+  @Input() public listItems: List<ListItem>;
   @Output() public removeItem: EventEmitter<ListItem> = new EventEmitter<ListItem>();
   @Output() public addItem: EventEmitter<string> = new EventEmitter<string>();
 

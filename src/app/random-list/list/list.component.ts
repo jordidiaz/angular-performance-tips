@@ -1,4 +1,6 @@
-import { Component, Output, EventEmitter, Input, ChangeDetectionStrategy } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
+import { List } from 'immutable';
+
 import { ListItem } from '../../list-generator';
 
 const fibonacci = (num: number): number => {
@@ -15,7 +17,7 @@ const fibonacci = (num: number): number => {
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ListComponent {
-  @Input() public listItems: ListItem[];
+  @Input() public listItems: List<ListItem>;
   @Output() private removeItem: EventEmitter<ListItem> = new EventEmitter<ListItem>();
 
   public onClickRemoveItem(item: ListItem): void {
