@@ -13,9 +13,10 @@ import { ListGenerator } from './list-generator';
 import { RandomListComponent } from './random-list/random-list.component';
 import { NameInputComponent } from './random-list/name-input/name-input.component';
 import { ListComponent } from './random-list/list/list.component';
+import { CalculatePipe } from './calculate.pipe';
 
 @NgModule({
-  declarations: [AppComponent, RandomListComponent, NameInputComponent, ListComponent],
+  declarations: [AppComponent, RandomListComponent, NameInputComponent, ListComponent, CalculatePipe],
   imports: [
     CommonModule,
     BrowserModule,

@@ -5,7 +5,7 @@
     </h3>
     <mat-chip-list>
       <mat-chip class="mat-chip mat-primary mat-chip-selected" color="primary" selected="true">
-        {{ calculate(item.num) }}
+        {{ item.num | calculate }}
       </mat-chip>
     </mat-chip-list>
     <i class="fa fa-trash-o" aria-hidden="true" (click)="onClickRemoveItem(item)"></i>

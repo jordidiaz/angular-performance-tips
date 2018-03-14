@@ -3,13 +3,6 @@ import { List } from 'immutable';
 
 import { ListItem } from '../../list-generator';
 
-const fibonacci = (num: number): number => {
-  if (num === 1 || num === 2) {
-    return 1;
-  }
-  return fibonacci(num - 1) + fibonacci(num - 2);
-};
-
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
@@ -22,10 +15,5 @@ export class ListComponent {
 
   public onClickRemoveItem(item: ListItem): void {
     this.removeItem.emit(item);
-  }
-
-  public calculate(num: number): number {
-    console.log('Calculating...');
-    return fibonacci(num);
   }
 }
